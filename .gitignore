@@ -2,9 +2,15 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.ini
 
 # C extensions
 *.so
+
+# Ignore VirtualEnv
+bin/
+include/
+share/
 
 # Distribution / packaging
 .Python
