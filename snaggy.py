@@ -21,7 +21,7 @@ import pymysql
 
 import readconfig
 import snaggy_article
-import verify_password
+import usermgmt
 
 if __name__ == "__main__" :
 
@@ -138,7 +138,7 @@ def run_http(flaskdebug=False, configfile="snaggy.ini") :
                                     401, \
                                     {'WWW-Authenticate': 'Basic realm="Login Required"'} )
         else :
-            verify_result = verify_password.verify_password(flask.g.username, password, \
+            verify_result = usermgmt.verify_password(flask.g.username, password, \
                                                             flask.g.ip, flask.g.cur, flask.g.snaggy_logger)
 
             if verify_result[0] == True :
